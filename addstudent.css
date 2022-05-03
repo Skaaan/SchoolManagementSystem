@@ -1,0 +1,127 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+body {
+    background-color: rgb(196, 229, 250);
+
+}
+
+nav {
+    background-color: #5B6DCD;
+    width: 70%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+nav div {
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav div a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav div a:hover {
+    color: #bebebe;
+}
+
+.introSection {
+    margin: 12rem 2rem 0rem 2rem;
+}
+
+.introSection div {
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #5B6DCD;
+    color: white;
+    margin: auto;
+    width: 15rem;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.functionButtons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.functionButtons button {
+    background-color: #5B6DCD;
+    color: white;
+    border: 1px solid white;
+    margin: 1rem;
+}
+
+
+.globalSection button {
+    margin: 0.2rem;
+    background-color: grey;
+}
+
+.globalSection button:hover {
+    color: white;
+}
+
+
+
+
+.globalSection div {
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: #5B6DCD;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .globalSection div {
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: #5B6DCD;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .globalSection {
+        margin: 20%;
+        background-color: grey;
+    }
+
+}

@@ -1,0 +1,94 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+body {
+    background-color: rgb(196, 229, 250);
+
+}
+
+nav {
+    background-color: #5B6DCD;
+    width: 70%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+nav div {
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav div a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav div a:hover {
+    color: #bebebe;
+}
+
+.introSection {
+    margin: 12rem 2rem 0rem 2rem;
+}
+
+.introSection div {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+
+
+
+
+}
+
+
+.globalComponentSection {
+    justify-content: center;
+}
+
+
+.globalSection a {
+    text-decoration: none;
+    border: 1px solid white;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: white;
+    background-color: #5B6DCD;
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+
+
+@media (max-width: 1200px) {
+
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .globalSection div {
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: #5B6DCD;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .globalSection {
+        margin: 20%;
+
+    }
+
+}

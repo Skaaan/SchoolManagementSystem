@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+        <div>
+            <a>My university</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="globalSection">
+
+            <section class="staffAdminSection">
+                <div>
+                    <h3>Admin Section</h3>
+                </div>
+                <div>
+                    <form action="admin.html" method="POST">
+                        <div>
+                            <label for="username">Username</label>
+                            <input type="text" name="username" placeholder="Username">
+                            <span></span>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" placeholder="Password">
+                            <span></span>
+                        </div>
+                        <button id="log-in">Log-in</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="staffAdminSection">
+                <div>
+                    <h3>Staff Section</h3>
+                </div>
+                <div>
+                    <form id="form1" action="staffView.html" method="POST">
+                        <div>
+                            <label for="username1">Username</label>
+                            <input class="input1" type="text" name="username1" placeholder="Username">
+                            <span></span>
+                        </div>
+                        <div>
+                            <label for="password1">Password</label>
+                            <input class="input1" type="password" name="password1" placeholder="Password">
+                            <span></span>
+                        </div>
+                        <button id="log-in1">Log-in</button>
+                    </form>
+                </div>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
+
+<script>
+
+    window.onload = () => {
+        this.sessionStorage.setItem('username', 'admin');
+        this.sessionStorage.setItem('password', 'admin');
+    }
+    window.onload = () => {
+        this.sessionStorage.setItem('username1', 'staff');
+        this.sessionStorage.setItem('password1', 'staff');
+    }
+
+    var input = document.getElementsByTagName('input');
+    var input1 = document.getElementsByClassName('input1');
+    var login = document.getElementById('log-in');
+    var login1 = document.getElementById('log-in1');
+    var form = document.querySelector('form');
+    form.onsubmit = () => { return false; }
+    var form1 = document.getElementById('form1');
+    form1.onsubmit = () => { return false; }
+
+
+    login.onclick = () => {
+
+        if ((input[0].value != "") && (input[1].value != "")) {
+            if ((input[0].value == sessionStorage.getItem('username')) && (input[1].value == sessionStorage.getItem('password'))) {
+                form.onsubmit = () => { return 1; }
+                document.cookie = "username=" + input[0].value;
+                document.cookie = "password=" + input[1].value;
+            }
+            else {
+                if ((input[0].value != sessionStorage.getItem('username'))) {
+                    input[0].nextElementSibling.textContent = "Username NOT match";
+                    setTimeout(() => {
+                        input[0].nextElementSibling.textContent = "";
+                    }, 2000);
+
+                }
+                if ((input[1].value != sessionStorage.getItem('password'))) {
+                    input[1].nextElementSibling.textContent = "Password NOT match";
+                    setTimeout(() => {
+                        input[1].nextElementSibling.textContent = "";
+                    }, 2000);
+
+                }
+
+            }
+
+        }
+        else {
+            if (input[0].value == "") {
+                input[0].nextElementSibling.textContent = "Username is empty";
+                setTimeout(() => {
+                    input[0].nextElementSibling.textContent = "";
+                }, 2000);
+            }
+            if (input[1].value == "") {
+                input[1].nextElementSibling.textContent = "Password is empty";
+                setTimeout(() => {
+                    input[1].nextElementSibling.textContent = "";
+                }, 2000);
+            }
+        }
+    }
+
+    login1.onclick = () => {
+
+        if ((input1[0].value != "") && (input1[1].value != "")) {
+            if ((input1[0].value == sessionStorage.getItem('username1')) && (input1[1].value == sessionStorage.getItem('password1'))) {
+                form1.onsubmit = () => { return 1; }
+                document.cookie = "username1=" + input1[0].value;
+                document.cookie = "password1=" + input1[1].value;
+            }
+            else {
+                if ((input1[0].value != sessionStorage.getItem('username1'))) {
+                    input1[0].nextElementSibling.textContent = "Username NOT match";
+                    setTimeout(() => {
+                        input1[0].nextElementSibling.textContent = "";
+                    }, 2000);
+
+                }
+                if ((input1[1].value != sessionStorage.getItem('password1'))) {
+                    input1[1].nextElementSibling.textContent = "Password NOT match";
+                    setTimeout(() => {
+                        input1[1].nextElementSibling.textContent = "";
+                    }, 2000);
+
+                }
+
+            }
+
+        }
+        else {
+            if (input1[0].value == "") {
+                input1[0].nextElementSibling.textContent = "Username is empty";
+                setTimeout(() => {
+                    input1[0].nextElementSibling.textContent = "";
+                }, 2000);
+            }
+            if (input1[1].value == "") {
+                input1[1].nextElementSibling.textContent = "Password is empty";
+                setTimeout(() => {
+                    input1[1].nextElementSibling.textContent = "";
+                }, 2000);
+            }
+        }
+    }
+
+</script>

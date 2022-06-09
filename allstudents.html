@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>allStudents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="allstudents.css">
+</head>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div>
+            <a href="">My university</a>
+        </div>
+        <div>
+            <a href="">Home</a>
+        </div>
+        <div>
+            <a href="">Student</a>
+        </div>
+        <div>
+            <a href="">Staff</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="introSection">
+            <div>
+                <h3>All Students</h3>
+            </div>
+        </section>
+
+        <section class="functionButtons">
+            <button
+                onclick="window.location.href='/C:/Users/skan/Documents/Bachelor%20AI/4-Semester/Web-Entwicklung/AdminStaff/addstudent.html'"
+                type="button" class="btn ">Add</button>
+            <button type="button" class="btn">Update</button>
+            <button type="button" class="btn">Delete</button>
+        </section>
+
+        <section class="functionButtons">
+            <div class="functionButtons">
+                <select id="selectField">
+                    <option value="" selected>Select departement</option>
+                    <option value="All">All</option>
+                    <option value="Fachbereich1">Fachbereich 1</option>
+                    <option value="Fachbereich2">Fachbereich 2</option>
+                    <option value="Fachbereich3">Fachbereich 3</option>
+                    <option value="Fachbereich4">Fachbereich 4</option>
+                </select>
+
+                <select id="selectSemester">
+                    <option value="" selected>Select start semester</option>
+                    <option value="All">All</option>
+                    <option value="Winter">Winter</option>
+                    <option value="Summer">Summer</option>
+                </select>
+
+                <script type="text/javascript" src="filter.js"></script>
+            </div>
+        </section>
+
+
+        <section class="globalSection">
+            <table id="myTable">
+                <tr id="HeadRow">
+                    <td>Student_Id</td>
+                    <td>First_Name</td>
+                    <td>Last_Name</td>
+                    <td>Departement</td>
+                    <td>Email</td>
+                    <td>Joining Date</td>
+                </tr>
+                <tr position="Fachbereich1" semester="Winter">
+                    <td>456789</td>
+                    <td>Mike</td>
+                    <td>Tyson</td>
+                    <td>Fachbereich 1</td>
+                    <td>mike4punch@gmail.com</td>
+                    <td>16-11-2015</td>
+                </tr>
+                <tr position="Fachbereich3" semester="Summer">
+                    <td>442443</td>
+                    <td>Kabida</td>
+                    <td>Wilson</td>
+                    <td>Fachbereich 3</td>
+                    <td>Willy@gmail.com</td>
+                    <td>13-04-2015</td>
+                </tr>
+                <tr position="Fachbereich1" semester="Summer">
+                    <td>429485</td>
+                    <td>Skander</td>
+                    <td>Ayari</td>
+                    <td>Fachbereich 1</td>
+                    <td>skanderayari0@gmail.com</td>
+                    <td>01-04-2015</td>
+                </tr>
+                <tr position="Fachbereich3" semester="Summer">
+                    <td>778898</td>
+                    <td>Johny</td>
+                    <td>Depp</td>
+                    <td>Fachbereich 3</td>
+                    <td>johny@gmail.com</td>
+                    <td>01-08-2015</td>
+                </tr>
+                <tr position="Fachbereich3" semester="Winter">
+                    <td>656655</td>
+                    <td>John</td>
+                    <td>Wick</td>
+                    <td>Fachbereich 3</td>
+                    <td>wick@gmail.com</td>
+                    <td>04-01-2015</td>
+                </tr>
+                <tr position="Fachbereich2" semester="Winter">
+                    <td>222444</td>
+                    <td>Nelson</td>
+                    <td>Mandela</td>
+                    <td>Fachbereich 2</td>
+                    <td>nelly@gmail.com</td>
+                    <td>27-10-2015</td>
+                </tr>
+                <tr position="Fachbereich4" semester="Summer">
+                    <td>656655</td>
+                    <td>Bob</td>
+                    <td>Sapp</td>
+                    <td>Fachbereich 4</td>
+                    <td>boby@gmail.com</td>
+                    <td>19-09-2015</td>
+                </tr>
+                <tr position="Fachbereich3" semester="Winter">
+                    <td>111111</td>
+                    <td>Rabye</td>
+                    <td>Bouden</td>
+                    <td>Fachbereich 3</td>
+                    <td>bouden@gmail.com</td>
+                    <td>10-12-2015</td>
+                </tr>
+                <tr position="Fachbereich2" semester="Summer">
+                    <td>445444</td>
+                    <td>Michel</td>
+                    <td>Angelo</td>
+                    <td>Fachbereich 2</td>
+                    <td>mongi@gmail.com</td>
+                    <td>30-06-2015</td>
+                </tr>
+                <tr position="Fachbereich2" semester="Summer">
+                    <td>988788</td>
+                    <td>Kais</td>
+                    <td>Saied</td>
+                    <td>Fachbereich 2</td>
+                    <td>kaisoun@gmail.com</td>
+                    <td>31-09-2015</td>
+                </tr>
+            </table>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>
